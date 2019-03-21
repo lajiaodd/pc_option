@@ -1,0 +1,54 @@
+body,html
+    // line-height:1
+    font-weight :300
+    font-family: 'PingFang SC',"STHeitiSC-Light",'HeLvetica-Light',arial,sans-serif
+.clearfix
+    display inline-block
+    &:after
+        display block
+        content "."
+        height 0
+        line-height 0
+        clear both
+        visibility hidden
+@media (min-device-pixel-ratio:1.5),(-webkit-min-device-pixel-ratio:1.5)
+    .moon-1px-b
+        &::after
+            -webkit-transform: scaleY(0.7)
+            transform: scaleY(0.7)
+@media (min-device-pixel-ratio:2),(-webkit-min-device-pixel-ratio:2)
+    .moon-1px-b
+        &::after
+            -webkit-transform: scaleY(0.5)
+            transform: scaleY(0.5)
+@media (min-device-pixel-ratio:1.5),(-webkit-min-device-pixel-ratio:1.5)
+    .moon-1px-t
+        &::before
+            -webkit-transform: scaleY(0.7)
+            transform: scaleY(0.7)
+@media (min-device-pixel-ratio:2),(-webkit-min-device-pixel-ratio:2)
+    .moon-1px-t
+        &::before
+            -webkit-transform: scaleY(0.5)
+            transform: scaleY(0.5)
+
+.moon-1px-b
+    position: relative
+    &:after
+        display: block
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        border-top:1px solid #6b6b6b
+        content : ''
+.moon-1px-t
+    position: relative
+    &:before
+        display: block
+        position: absolute
+        left: 0
+        top : 0
+        width: 100%
+        border-top:1px solid #6b6b6b
+        content : ''
